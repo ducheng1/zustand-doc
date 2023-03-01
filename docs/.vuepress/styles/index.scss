@@ -1,0 +1,106 @@
+:root {
+  --homepage-width: 1280px;
+}
+
+.navbar {
+  border-bottom: none;
+  backdrop-filter: blur(1rem);
+}
+
+.home {
+  padding-top: var(--navbar-height);
+}
+
+#main-title {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.homepage {
+  width: 100%;
+  &-description {
+    text-align: center;
+  }
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1.2rem;
+    margin: 1.2rem 0 2rem 0;
+  }
+  &-points {
+    display: flex;
+    margin-bottom: 4rem;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      &-card {
+        width: 100%;
+        flex-grow: 1;
+      }
+    }
+
+    @media (min-width: 768px) {
+      &-card {
+        width: calc(calc(100% - 12rem) / 3);
+      }
+    }
+    &-card {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--c-tip-bg);
+      padding: 1.6rem;
+      border-radius: 0.8rem;
+      height: 6rem;
+      overflow: hidden;
+      &-title {
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+      }
+      &-content {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.btn {
+  color: var(--c-text);
+  padding: 0.6rem 1.4rem;
+  border-radius: 1.2rem;
+  vertical-align: middle;
+  line-height: 1.2rem;
+  font-size: 1rem;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+    text-decoration: none !important;
+  }
+}
+
+.btn-primary {
+  background-color: var(--c-brand-light);
+  color: whitesmoke;
+  text-decoration: none;
+  outline: 1px solid var(--c-text-accent);
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--c-brand);
+    transition: all 0.3s;
+    outline: 1px solid transparent;
+  }
+}
+
+.btn-normal {
+  background-color: none;
+  outline: 1px solid var(--c-tip-title);
+  transition: all 0.3s;
+  &:hover {
+    color: whitesmoke;
+    background-color: var(--c-brand-light);
+    transition: all 0.3s;
+    outline: 1px solid transparent;
+  }
+}
